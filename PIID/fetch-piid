@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# To install wget on Mac, see the instruction here:
+# http://osxdaily.com/2012/05/22/install-wget-mac-os-x/
+
+PAGE='https://www.fpds.gov/ezsearch/search.do?indexName=awardfull&templateName=1.4.4&s=FPDSNG.COM&q='$1
+OUTPUT=$1'.html'
+
+echo 'Fetching: ' $1
+wget -q -O - $PAGE > $OUTPUT
